@@ -98,7 +98,7 @@ function router(nav) {//Part #2 Point 6
     //router to update book
     booksRouter.post('/update', function (req, res) {
         bookdata.findOne({ _id: req.body.id }) //Part #2 Point 9
-            .then(async function (book) {
+            .then(function (book) {
                 if (req.body.image != "")
                     book.image = req.body.image;
                 book.title = req.body.title;
